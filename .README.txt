@@ -1,0 +1,20 @@
+.README Module_2
+
+in Module_2 VBACode.bas
+
+TA Assisted Code:
+
+    Dim ws As Worksheet
+    
+    For Each ws In ThisWorkbook.Worksheets
+
+    Next ws
+
+--
+
+TA Assisted Code:
+
+    Extremes = Application.WorksheetFunction.Max(Range("K2:K" & lastrow))
+    Cells(2, 16).Value = Extremes
+    Ticker = Application.WorksheetFunction.Match(Application.WorksheetFunction.Max(Range("K2:K" & lastrow)), Range("K2:K" & lastrow), 0)
+    Cells(2, 15).Value = Cells(Ticker + 1, 9).Value
